@@ -1,3 +1,5 @@
+1 print the pattern
+
 #include <stdio.h>
 int main() {
    int n=3,a,c,d;
@@ -29,3 +31,24 @@ o/p
 32123
 32223
 33333
+
+
+2.findthe odd factorsbetween two numbers
+#include <stdio.h>
+
+int main()
+{
+    int n=10,m=40,d=0;
+    for(int i=n;i<=m;i++){
+        int c=0;
+        for(int j=1;j<=i;j++){
+            if(i%j==0)
+            c++;
+        }
+        if(c%2==1)
+        d++;
+    }
+    printf("%d",d);
+}
+
+o/p=3
