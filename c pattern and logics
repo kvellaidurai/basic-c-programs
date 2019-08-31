@@ -77,3 +77,34 @@ o/p
 1*2
 1*2*3
 1*2*3*4
+
+
+4.eight cells
+
+#include <stdio.h>
+
+int main() {
+int n=8,day=3;
+int arr[]={1,0,0,1,0,0,1,0};
+int itr,itr1,ans[n];
+for(itr1=1;itr1<=day;itr1++)
+{
+   ans[0]=arr[1];
+   ans[7]=arr[6];
+   for(itr=1;itr<7;itr++)
+   {
+   ans[itr]=arr[itr-1]^arr[itr+1];
+   }
+   for(itr=0;itr<8;itr++)
+   {
+     arr[itr]=ans[itr];
+   }
+       
+}
+for(itr=0;itr<8;itr++)
+{
+  printf("%d ",arr[itr]);
+}
+}
+
+o/p=1 0 1 0 1 1 1 0 
