@@ -143,5 +143,110 @@ o/p
 89 144 233 377 610 
 
 
+5.alternate add sub
+
+int a=0;
+		if(input2==1)
+		{
+        	for(int i=input1;i>0;i=i-2)
+        	{
+				a+=i;
+			}
+			for(int j=input1-1;j>0;j=j-2)
+			{
+				a-=j;
+			}
+		}
+		else
+		{	a=input1;
+			for(int i=input1-2;i>0;i=i-2)
+			{
+				a-=i;
+			}
+			for(int j=input1-1;j>0;j=j-2)
+			{
+				a+=j;
+			}
+
+		}
+		return a;
+	}
+}
+
+            	
+      o/p=6-5+4-3+2-1...
+      
+  
+6.nambiar number
+
+String ans="";
+        int e=Integer.parseInt(String.valueOf(input1.charAt(0)));
+        int s=e;
+        int ck=0;
+        boolean evn=false,odd=false;
+        if(e%2==0)
+            evn=true;
+        else
+            odd=true;
+        for(int i=1;i<input1.length();i++)
+        {
+            ck=0;
+            s=s+Integer.parseInt(String.valueOf(input1.charAt(i)));
+            if(evn)
+            {
+                if(s%2==1)
+                {
+                    ans+=String.valueOf(s);
+                    s=0;
+                    ck=1;
+                    if(i+1!=input1.length())
+                    {
+                        e=Integer.parseInt(String.valueOf(input1.charAt(i+1)));
+                        if(e%2==0)
+                        {
+                            evn=true;
+                            odd=false;
+                        }
+                        else
+                        {
+                            odd=true;
+                            evn=false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if(s%2==0)
+                {
+                    ans+=String.valueOf(s);
+                    s=0;
+                    ck=1;
+                    if(i+1!=input1.length())
+                    {
+                        e=Integer.parseInt(String.valueOf(input1.charAt(i+1)));
+                        if(e%2==0)
+                        {
+                            evn=true;
+                            odd=false;
+                        }
+                        else
+                        {
+                            odd=true;
+                            evn=false;
+                        }
+                    }
+                }
+            }
+        }
+        if(ck==0)
+        {
+            ans+=String.valueOf(s);
+        }
+        return Integer.parseInt(ans);
+o/p=9867054332
+
+
+
 
 
